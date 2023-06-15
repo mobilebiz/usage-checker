@@ -17,4 +17,3 @@ client.usage.records.lastMonth.list({
 .finally(() => {
   console.log(`🐞 Total price: ${totalPrice}`);
 });
-// console.log(`🐞 Total price: ${totalPrice}`);
