@@ -6,7 +6,9 @@ console.log(`🐞 Started...`);
 const client = require('twilio')(ACCOUNT_SID, AUTH_TOKEN);
 
 let totalPrice = 0;
-client.usage.records.lastMonth.list().then(async (records) => {
+client.usage.records.lastMonth.list({
+  includeSubaccounts: true,
+}).then(async (records) => {
   records.filter((record) => record.count > 0).forEach((record) => {
     console.log(`${record.category} count:${record.count} price:${record.price}`);
     totalPrice += Math.ceil(record.price);
