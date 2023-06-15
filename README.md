@@ -10,7 +10,10 @@ Twilioの前月の利用料を抽出します。
 git clone https://github.com/mobilebiz/usage-checker.git
 cd usage-checker
 npm install
+cp .env.example .env
 ```
+
+`.env`の中に書かれている`ACCOUNT_SID`と`AUTH_TOKEN`を、確認したいアカウントのそれぞれの値で設定します。
 
 ## 実行
 
